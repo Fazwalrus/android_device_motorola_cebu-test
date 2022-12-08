@@ -10,7 +10,7 @@ on early-boot
 
     chown system system /sys/class/backlight/panel0-backlight/brightness
 
-service vendor.light-cebu /vendor/bin/hw/android.hardware.lights-service.cebu
+service vendor.light-borneo /vendor/bin/hw/android.hardware.lights-service.borneo
     class hal
     user system
     group system

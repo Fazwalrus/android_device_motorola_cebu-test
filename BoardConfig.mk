@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/cebu
+DEVICE_PATH := device/motorola/borneo
 
 # Architecture
 TARGET_ARCH := arm64
@@ -20,7 +20,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := cebu
+TARGET_OTA_ASSERT_DEVICE := borneo
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -35,7 +35,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.hab.csv=0 androidboot.hab.product=cebu androidboot.hab.cid=50 buildvariant=userdebug
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.hab.csv=0 androidboot.hab.product=borneo androidboot.hab.cid=50 buildvariant=userdebug
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
@@ -46,8 +46,8 @@ BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/motorola/cebu
-TARGET_KERNEL_CONFIG := vendor/cebu_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/borneo
+TARGET_KERNEL_CONFIG := vendor/bengal-moto-cebub_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_USE_DEFAULT_CLANG := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -92,8 +92,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_cebu
-TARGET_RECOVERY_DEVICE_MODULES := libinit_cebu
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_borneo
+TARGET_RECOVERY_DEVICE_MODULES := libinit_borneo
 
 # Media
 TARGET_USES_ION := true
@@ -208,4 +208,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/motorola/cebu/BoardConfigVendor.mk
+include vendor/motorola/borneo/BoardConfigVendor.mk

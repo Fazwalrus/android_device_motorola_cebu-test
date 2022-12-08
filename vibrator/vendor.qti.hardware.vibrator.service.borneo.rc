@@ -1,0 +1,4 @@
+service vendor.qti.vibrator.borneo /vendor/bin/hw/vendor.qti.hardware.vibrator.service.borneo
+    class hal
+    user system
+    group system input

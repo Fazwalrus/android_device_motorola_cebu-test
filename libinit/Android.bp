@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "libinit_cebu",
+    name: "libinit_borneo",
     srcs: [
         "libinit_dalvik_heap.cpp",
         "libinit_variant.cpp",
@@ -17,9 +17,9 @@ cc_library_static {
 }
 
 cc_library_static {
-    name: "init_cebu",
-    srcs: ["init_cebu.cpp"],
-    whole_static_libs: ["libinit_cebu"],
+    name: "init_borneo",
+    srcs: ["init_borneo.cpp"],
+    whole_static_libs: ["libinit_borneo"],
     include_dirs: [ 
         "system/libbase/include",
         "system/core/init",

@@ -27,7 +27,7 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#define LOG_TAG "vendor.qti.vibrator.cebu"
+#define LOG_TAG "vendor.qti.vibrator.borneo"
 
 #include <cutils/properties.h>
 #include <dirent.h>
