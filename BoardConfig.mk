@@ -176,6 +176,10 @@ USE_SENSOR_MULTI_HAL := true
 # Touchpanel
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
+# This platform has a metadata partition: declare this
+# to create a mount point for it
+BOARD_USES_METADATA_PARTITION := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
